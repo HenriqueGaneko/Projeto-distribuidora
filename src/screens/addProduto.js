@@ -104,14 +104,11 @@ export default function AddProduto() {
                     </View>
                     {error && <Text>{error}</Text>}
                 </View>
-                <MyButton
-                    onPress={() => handleSubmit()}
-                    text="Adicionar produto"
-                    style={{ width: "100%" }}
-                    backgroundColor="#E0B201"
-                    color="#000000"
-                />
-                
+                <TouchableOpacity style={{backgroundColor:"#E0B201", padding: 24, alignItems:'center', borderRadius: 12, justifyContent: 'center'}} onPress={() => handleSubmit()}>
+                    <Text>
+                        Adicionar produto
+                    </Text>
+                </TouchableOpacity>
             </View>
         </View>
     )

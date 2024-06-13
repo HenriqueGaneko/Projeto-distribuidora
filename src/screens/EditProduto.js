@@ -7,9 +7,9 @@ import MyButton from "../components/MyButton";
 import {
     MaterialCommunityIcons,
     Fontisto
-  } from "@expo/vector-icons";
+} from "@expo/vector-icons";
 
-  const EditProdutos = ({ route }) => {
+const EditProdutos = ({ route }) => {
     const { id } = route.params;
     const [produtoNome, setProdutoNome] = useState("");
     const [produtoCategoria, setProdutoCategoria] = useState("");
@@ -47,7 +47,7 @@ import {
             setError("Por favor, preencha todos os campos!");
             return;
         }
-        if(produtoCategoria == []){
+        if (produtoCategoria == []) {
             setError("Por favor, preencha o campo categoria!");
             return;
         }
@@ -78,7 +78,7 @@ import {
                 <Text style={{ fontSize: 18, fontWeight: 600 }}>Edite seu produto</Text>
             </View>
             <View style={{ justifyContent: "space-between", height: "75%", padding: 20 }}>
-                <View style={{gap: 15}}>
+                <View style={{ gap: 15 }}>
                     <View style={style.inputBox}>
                         <MaterialCommunityIcons name="pencil" size={28} color="#000" />
                         <TextInput
@@ -90,7 +90,7 @@ import {
                         />
                     </View>
                     <View style={style.inputBox}>
-                    <MaterialCommunityIcons name="toolbox" size={28} color="#000" />
+                        <MaterialCommunityIcons name="toolbox" size={28} color="#000" />
                         <TextInput
                             style={style.input}
                             placeholder="Quantidade"
@@ -100,7 +100,7 @@ import {
                         />
                     </View>
                     <View style={style.inputBox}>
-                    <Fontisto name="dollar" size={28} color="#000" />
+                        <Fontisto name="dollar" size={28} color="#000" />
                         <TextInput
                             style={style.input}
                             placeholder="Preço"
@@ -112,22 +112,26 @@ import {
                     <View style={style.inputPicker}>
                         <MaterialCommunityIcons name="shopping-outline" size={28} color="#000" />
                         <Picker style={style.picker} selectedValue={produtoCategoria} onValueChange={(itemValue) => setProdutoCategoria(itemValue)} >
-                            <Picker.Item label="Selecione uma categoria" value=""/>
+                            <Picker.Item label="Selecione uma categoria" value="" />
                             {categorias.map((categoria, index) => (
-                                <Picker.Item key={index} label={categoria.name} value={categoria.id}/>
+                                <Picker.Item key={index} label={categoria.name} value={categoria.id} />
                             ))}
                         </Picker>
                     </View>
                     {error && <Text>{error}</Text>}
                 </View>
-                <MyButton
-                    onPress={() => handleSubmit()}
+                <TouchableOpacity style={{backgroundColor:"#E0B201", padding: 24, alignItems:'center', borderRadius: 12, justifyContent: 'center'}} onPress={() => handleSubmit()}>
+                    <Text>
+                        Adicionar produto
+                    </Text>
+                </TouchableOpacity>
+                {/* <MyButton
+
                     text="Adicionar produto"
                     style={{ width: "100%" }}
                     backgroundColor="#E0B201"
-                    color="#FFF"
-                />
-                
+                /> */}
+
             </View>
         </View>
     )
