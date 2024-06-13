@@ -156,7 +156,7 @@ export default function Profile() {
   
   return (
     <ScrollView contentContainerStyle={style.container}>
-      <View style={{ backgroundColor: "#AC1A1A", alignItems: "center" }}>
+      <View style={{ backgroundColor: "#000000", alignItems: "center" }}>
         <View style={style.header}>
           <TouchableOpacity onPress={() => setEditable(true)}>
             <MaterialCommunityIcons name="pencil" size={28} color="#E0B201" />
@@ -261,7 +261,7 @@ const style = StyleSheet.create({
     flex: 1,
   },
   header: {
-    backgroundColor: "#AC1A1A",
+    backgroundColor: "#000000",
     width: "100%",
     padding: 12,
     height: 100,
@@ -275,6 +275,7 @@ const style = StyleSheet.create({
     position: "relative",
     marginTop: 20,
     marginBottom: -100,
+  
   },
   profileImage: {
     width: 200,

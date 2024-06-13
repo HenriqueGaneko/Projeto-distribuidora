@@ -5,7 +5,7 @@ export default function MyButton({ backgroundColor, text, onPress, style }) {
     <TouchableOpacity
       style={[
         styles.button,
-        { backgroundColor: backgroundColor || "#E0B201" },
+        { backgroundColor: backgroundColor || "#DC1637" },
         style,
       ]}
       onPress={onPress}
@@ -19,10 +19,10 @@ const styles = StyleSheet.create({
   button: {
     padding: 16,
     alignItems: "center",
-    borderRadius: 50,
+    borderRadius: 4,
   },
   text: {
-    color: "#000000",
+    color: "#fff",
     fontWeight: "500",
   },
 });

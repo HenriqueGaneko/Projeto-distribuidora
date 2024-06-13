@@ -4,9 +4,9 @@ import SignUp from '../screens/SignUp';
 import SignIn from '../screens/SignIn';
 
 const Stack = createNativeStackNavigator();
-export default function AuthRoutes(){
-    return(
-        <Stack.Navigator screenOptions={{headerShown: false, }} initialRouteName="Start"> 
+export default function AuthRoutes() {
+    return (
+        <Stack.Navigator screenOptions={{ headerShown: false, }} initialRouteName="Start">
             <Stack.Screen name="Start" component={Start} />
             <Stack.Screen name="SignUp" component={SignUp} />
             <Stack.Screen name="SignIn" component={SignIn} />
